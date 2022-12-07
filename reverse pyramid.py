@@ -1,6 +1,10 @@
-l = True
-while l == True: 
-    n = int(input("Enter number of rows: "))
-    while n != 0:
-        print("* "*(2*n - 1))
-        n -= 1
+rows = int(input("Enter number of rows: "))
+
+for i in range(rows, 1, -1):
+    for space in range(0, rows-i):
+        print("  ", end="")
+    for j in range(i-1, 2*i-1):
+        print("* ", end="")
+    for j in range(1, i-1):
+        print("* ", end="")
+    print()
